@@ -17,7 +17,7 @@ namespace MixERP.HRM.Models
             if (model == null)
             {
                 model = await FromStoreAsync(tenant, employeeId).ConfigureAwait(false);
-                factory.Add(key, model, DateTimeOffset.UtcNow.AddMinutes(2));
+                factory.Add(key, model, DateTimeOffset.UtcNow.AddMinutes(0.5));
             }
 
             return model;
